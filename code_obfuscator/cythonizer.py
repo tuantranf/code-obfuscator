@@ -19,9 +19,9 @@ class Cythonizer(object):
         for python_file in python_files:
             if not python_file.endswith('__init__.py'):
                 self.build_so(python_file)
-#                self.clean_up(python_file)
+                self.clean_up(python_file)
 
-    #        shutil.rmtree(os.path.realpath('./build'))
+        shutil.rmtree(os.path.realpath('./build'))
 
     def get_package_name(self, file):
         relative_path = file[len(self.path) + 1:]
