@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-python /usr/local/code-obfuscator/cli.py /source
+cp -r /source/* /dist
+
+python /usr/local/code-obfuscator/cli.py /dist

@@ -16,4 +16,6 @@ ADD . /usr/local/code-obfuscator
 
 RUN mkdir /source
 
+RUN mkdir /dist
+
 ENTRYPOINT ["sh", "/entrypoint.sh"]

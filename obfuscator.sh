@@ -6,5 +6,7 @@ command -v docker >/dev/null 2>&1 || {
 }
 
 source_path=$(cd $1 && pwd)
+dist_path="${source_path}_dist"
 
-docker run --rm -ti -v $source_path:/source podderai/code-obfuscator
+mkdir -p dist_path
+docker run --rm -ti -v $source_path:/source -v $dist_path:/dist podderai/code-obfuscator
